@@ -1,0 +1,61 @@
+<!-- AUDIO -->
+
+<!-- Audio element can be used to display audio on the webpage,
+    Structure of the audio element is just like the "Img" element with some differences.
+      The main difference is that it has a closing tag,
+        There are also some differences in the attributes(i.e, autoplay, loop, controls) -->
+
+<audio controls>
+    <source src="http://example.com/birds.ogg" type="audio/ogg; codec=opus">
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/birds.mp3" type="audio/mpeg">
+    Sorry your browser doesn't not support audio.
+
+</audio>
+
+<!-- just like image, audio also has different formats(mp3, obb). Just like above, we can write several formats in the "<source>" tag and the computer will pick the first one it can read. -->
+<hr>
+
+<!-- VIDEO -->
+
+<!-- "video" element is used to display videos,
+    Structure of the audio element is just like the "Img" and element with some differences.
+     The first difference is that it has a closing tag, -->
+
+<video controls>
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.vp9.webm" type="video/webm">
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.h264.mp4" type="video/mp4">
+</video>
+
+<!-- Just like above, we can write several codec formats in the "<source>" tag and the computer will pick the first one it can read. -->
+
+<!-- CAPTIONS AND SUBTITLES -->
+
+<!-- "Captions and subtitiles" are used in the "video" element they are heplfu to people who can't hear or understand the video -->
+
+
+<video controls>
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.vp9.webm" type="video/webm">
+    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.h264.mp4" type="video/mp4">
+
+    <track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.vtt" kind="captions" label="English"
+        srclang="en" default>
+
+    <track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.es-la.es.vtt" kind="subtitles"
+        label="Español" srclang="es">
+
+    <p>This would be a video of a moonwalk, if your device supported playing this video.</p>
+</video>
+
+<!-- To show subtitles, we'll use the "track" element inside the video element with the "src" attribute pointing to the file location,
+    The "Kind" attribute is used to tell the computer that these are subtitles,
+     The "Label" attribute is used to tell the uuer visually in the options about the language of the subtitles,
+      The "srclang" attribute is used to tell the computer about the language of the subtitles. -->
+
+<!-- EMBEDDINGOTHER MEDIA FROM OTHER WEBSITES -->
+
+<!-- Embedding means placing content form one site into the body of a page on another site  -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ENG6ZbTkcu0?si=cKlcxQJDeLwZVIEJ"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

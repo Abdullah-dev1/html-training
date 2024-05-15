@@ -1,0 +1,107 @@
+<!-- images -->
+
+<!-- There are some attributes (exactly 4) that are used in  every image (ie, src(source), alt(alternate), width, height ) -->
+
+<!-- "src" attribute is just like href attribute, but the only difference is that we have to put iimage links instead or websites URLs. -->
+
+<!-- "alt" attribute is used whenever for some reason the image can't be shown the alternate text takes its place (it is also useful for screen readers ). -->
+
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/maggie.jpg" alt="shiny black dog looking pensive"
+    width="400" height="300">
+
+<!-- IMAGE FORMAT -->
+
+<!-- Images are used a lot in HTML files, but the image file size needs to be very small in order to download fast. -->
+
+<!----------------------------------------------------------------->
+<!-- "GIF" This format does well compressing large areas of a single color, 
+    It has limited color space of 256 colors,
+     It can also be transparent but it will have jagged edges,
+      It can have multiple frames thus it can be animated -->
+<!----------------------------------------------------------------->
+<!-- "SVG" (Scalable Vector Graphic), It is useful in making loos, icons, etc,
+    unlike "GIF" it is a vector file, 
+     Because it works on vector and math it can be really small or really big without getting pixelated, 
+      it's file size is very small,   -->
+<!----------------------------------------------------------------->
+<!-- "JPG" It is known for being a great format for compressing photos,
+    "JPG" can be compressed to a smaller size but its qualiy will drop, -->
+<!----------------------------------------------------------------->
+<!-- "PNG" format helps with the images that need tranparency,
+    "PNG" is a newer format than "GIF" or "JPG",
+      It sometimes does a greter job in compressing the images of the "GIF" format,
+       It also does a greater job in compressing the images of the "JPG" format,
+        But not always it depeds on the usage  -->
+
+<!-- RESPONSIVE IMAGES -->
+
+<!-- when a image is displayed on the web, it is diffeent on different types of screen thus the qualiy drops.
+              To fix this we can use the following code -->
+
+<!-- "Srcset attribute" it allows us to specify multiple files to be used based on either viewport width or image pixel width  -->
+
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="shiny black dog looking pensive"
+    width="480" height="360">
+
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="shiny black dog looking pensive"
+    width="480" height="360" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-960.jpg 2x, 
+               https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg 3x, 
+                     https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg 4x">
+
+<hr>
+<!-- RESPONSIVE WIDTH -->
+
+<!-- In this way the computer chooses the right viewport width as well as the density of the pic.
+    This is much faster because the computer downloads the image before the page even loads in,
+     To do this we are going to use the size attribute. -->
+
+<!-- "Sizes Attribute" it listswhich size image to use at which media query. -->
+
+
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="shiny black dog looking pensive"
+    width="480" height="360" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg  480w, 
+	   	  	   https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-960.jpg  960w, 
+	   	  	   https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg 1440w, 
+		 				 https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg 1920w">
+
+<!-- RESPONSIVE PICTURES -->
+
+<!-- using this, different images can be shown on different devices -->
+
+<picture>
+    <source media="(min-width:600px)" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-720.jpg">
+    <source srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-320.jpg">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg" width="480" height="360"
+        alt="black dog lying in the sun">
+</picture>
+
+<!--In the following example both of the techniques stated above are used -->
+
+<picture>
+    <source media="(min-width:600px)" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-320.jpg  320w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg  480w, 
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-720.jpg  720w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-960.jpg  960w, 
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1440.jpg 1440w, 
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1920.jpg 1920w">
+    <source srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-320.jpg 320w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-480.jpg 480w, 
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-720.jpg 720w,
+                    https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-960.jpg 960w">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg" alt="smiling black dog" height="360px"
+        width="480px">
+</picture>
+
+<hr>
+<!-- FIGURE AND FIGCAPTION -->
+
+<!-- "Figure And Figcaption do not have any visual effects they only have semantic value that only the computers can read. -->
+
+<figure>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/maggie2.png" width="960" height="720"
+        alt="shiny black dog in the sun">
+
+    <figcaption>Maggie the dog enjoys resting in a field, after a long day of chasing squirrels.</figcaption>
+</figure>
+
+<!-- These provide the browser with more scemantic information about the relativity between figure and figcaption  -->

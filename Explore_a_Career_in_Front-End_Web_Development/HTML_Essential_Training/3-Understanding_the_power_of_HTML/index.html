@@ -1,0 +1,162 @@
+<!-- HTML ATTRIBUTES -->
+
+<!--global atribites, attributes that canbe use in every element -->
+
+<!-- "CLASS" Allows us to target all elements with that class in our CSS or javascript  -->
+
+<p class="intro">
+    This is the introduction of classes
+</p>
+
+<hr>
+<!-- "ID" Allows us to target a unique element with that id in our CSS or javascript -->
+
+<p class="intro" id="article-intro">
+    This is the introduction of id's
+</p>
+
+<hr>
+<!-- "CONTENTEDITABLE" Allows the user to edit the content of the page -->
+
+<blockquote contenteditable="true">
+    Edit this content to add your own quote
+</blockquote>
+
+<cite contenteditable="true">
+    your name here
+</cite>
+
+<hr>
+<!-- "LANG" and "DIR" means language and direction respectively these are used to define language and the text direction -->
+
+<p lang="en-GB"> This paragraph is in British
+    English.</p>
+
+<p lang="fr">Ce paragraphe est défini en
+    français.</p>
+
+<p dir="ltr">This paragraph is in English.
+    It flows from left to right.</p>
+
+<p dir="rtl">یہ دائیں سے بائیں ہے.</p>
+
+<hr>
+<!-- ARIA ROLES -->
+
+<!-- "ARIA roles" are the HTML attribute that provide accessible information about that specific element.  -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: Avenir, Helvetica, sans-serif;
+        margin: 2em;
+        font-size: 180%;
+        line-height: 1.5;
+    }
+
+    body {
+        margin: 2rem 1rem 4rem;
+    }
+
+    h1 {
+        text-transform: capitalize;
+    }
+
+    .grid {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(4, 2fr) 1fr 1fr;
+        grid-template-areas:
+            ".  H  E   .   . . "
+            ".  H  E   .   . . "
+            ".  L  .   LH  . . "
+            "WW .  .   .   O O "
+            ".  OO LL  .   . . "
+            "RR .  .   DD  . . ";
+    }
+
+    .grid::before {
+        border: 7px solid #f05858;
+        content: ' ';
+        grid-column: 2 / 6;
+        grid-row: 2 / 5;
+        width: 100%;
+    }
+
+    span:nth-child(1) {
+        grid-area: H;
+    }
+
+    span:nth-child(2) {
+        grid-area: E;
+    }
+
+    span:nth-child(3) {
+        grid-area: L;
+    }
+
+    span:nth-child(4) {
+        grid-area: LH;
+    }
+
+    span:nth-child(5) {
+        grid-area: O;
+    }
+
+    span:nth-child(6) {
+        grid-area: WW;
+    }
+
+    span:nth-child(7) {
+        grid-area: OO;
+    }
+
+    span:nth-child(8) {
+        grid-area: RR;
+    }
+
+    span:nth-child(9) {
+        grid-area: LL;
+    }
+
+    span:nth-child(10) {
+        grid-area: DD;
+    }
+</style>
+
+<h1 aria-label="Hello World">
+    <div class="grid" aria-hidden="true">
+        <span>H</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+
+        <span>w</span>
+        <span>o</span>
+        <span>r</span>
+        <span>l</span>
+        <span>d</span>
+    </div>
+</h1>
+
+<!-- Aria helps the screen readers to read a specific word given in the "aria-label" attribute -->
+
+<hr>
+
+<!-- "HTML Entities" are used for special characters (ie, double-space,< ,> , etc) in the code that would'nt be possible to add normally these include "&nbsp", "&gt", "&lt", "&amp", "&copy", etc -->
+
+<p>Here is a sentence that will break between every word, including between Jen&nbsp;Simmons.</p>
+
+<p>Here’s an example.&nbsp;&nbsp; Some people put multiple spaces between every sentence.&nbsp;&nbsp; Like an
+    animal.&nbsp;&nbsp; Why?&nbsp;&nbsp; I don’t know.&nbsp;&nbsp; The computer is not a typewriter. </p>
+
+<p>
+    "&lt;" becomes (less than), "&gt;" becomes (greater than), "&amp;" becomes (ampersand).
+</p>
+<p>
+    "&copy;" becomes (©).
+</p>
+

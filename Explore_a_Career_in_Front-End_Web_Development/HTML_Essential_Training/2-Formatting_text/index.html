@@ -1,0 +1,207 @@
+<!-- PARAGRAPHS -->
+
+If you just put all the content in an HTML file with no markup, it just ends up as one big blob on the website. The
+browser assumes it's all one long string of text.
+
+We can try to create separate paragraphs by leaving a bunch of space in our HTML file, but that space doesn't count. The
+browser ignores it. All these words simply add up to a bunch of words in a row.
+
+The browser doesn't know what this is, because we haven't used any HTML yet to tell it what this is.
+
+<hr>
+<!-- Once we are done adding the HTML elements to mark our paragraphs, the code looks like this: -->
+
+<p>If you put all the content in an HTML file with markup, it does not end up as one big blob on the website. The
+    browser knows that these are different strings of text.</p>
+
+<p>We can try to create separate paragraphs by leaving a bunch of space in our HTML file, but that space doesn't count.
+    The browser ignores it. All these words simply add up to a bunch of words in a row.Only marked up text like these
+    work.</p>
+
+<p>The browser does know what this is, because we have now used HTML paragraph tags to tell it what this is.</p>
+
+<hr>
+<!-- HEADINGS/HEADLINES -->
+
+<!-- There are 6 headings, ranging from h1 to h6, with h1 being the most important/prominent and h6 being the leastimportant/prominent. -->
+
+<h1>1st Level Headline</h1>
+<h2>2nd Level Headline</h2>
+<h3>3rd Level Headline</h3>
+<h4>4th Level Headline</h4>
+<h5>5th Level Headline</h5>
+<h6>6th Level Headline</h6>
+
+<hr>
+<!-- Example of when to use the right headings -->
+
+<h1>Title of this Article</h1>
+<h2>Subtitle that’s usually smaller and maybe longer</h2>
+
+<p>Then the text of the article begins. And you already have a sense of what this is going to be about, because the
+    title and subtitle have set some kind of expectation</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet metus eu enim lacinia, quis vulputate
+    velit interdum. Etiam gravida, leo nec faucibus sollicitudin, ipsum ante eleifend est, a suscipit sapien ipsum vel
+    orci. Etiam magna libero, mattis a arcu at, mattis elementum tortor. </p>
+
+<p>Mauris pellentesque vitae arcu sit amet vulputate. Duis tincidunt, neque ut sollicitudin dapibus, erat quam porttitor
+    tortor, fermentum gravida quam libero nec justo. Ut laoreet placerat tellus, et malesuada risus dictum nec. Ut eget
+    maximus eros, ut tristique felis. </p>
+
+<p>Maecenas eu euismod odio, eget fermentum enim. Nulla ut sapien arcu. Cras ac vestibulum risus. Nam placerat pretium
+    massa sit amet sagittis. Praesent ex ipsum, volutpat commodo tellus in, cursus vestibulum nisl. Curabitur dolor
+    ligula, ultrices eget leo ac, rutrum condimentum purus. Aenean justo magna, tempus ut scelerisque lobortis, semper
+    sit amet sapien. Nulla at dui aliquam, malesuada orci lacinia, efficitur turpis. Vestibulum porta nec dui sit amet
+    dictum. Morbi tristique vitae mauris quis commodo. Nullam et vehicula nulla.</p>
+
+<hr>
+<!-- ITALIC -->
+
+<!-- There are two ways in which we can make a text italic <i> or <em>, 
+    <i> is used to visually change the appearence of the text,
+         whereas <em> is used to verbally emphasis italic. -->
+
+<p>My <em>favorite</em> character from <i>Sesame Street</i> is Grover.</p>
+
+<hr>
+<!-- BOLD -->
+
+<!-- There are two ways in which we can make a text bold <b> or <strong>, 
+    <g> is used to visually change the appearence of the text,
+         whereas <bold> is used to verbally make the text important. -->
+
+<p>This text is visually <b>bold</b> whereas this text is verbally <strong>strong/important</strong></p>
+
+<hr>
+<!-- LISTS -->
+
+<!-- there are three types of lists.
+    • <ul> unordered lists and <li> stands for list items,
+    • <ol> ordered list and <li> stands for list items,
+    • <dl> definition list, <dt> stands for definition term and <dd> stands for definition description -->
+
+<!-- Unordered list -->
+
+<ul>
+    <li>flour</li>
+    <li>sugar</li>
+    <li>baking powder</li>
+    <li>salt</li>
+    <li>non-dairy milk</li>
+    <li>apple cider vinegar</li>
+    <li>vanilla</li>
+</ul>
+
+<hr>
+<!-- Ordered list -->
+
+<ol>
+    <li>In a bowl, mix all the dry ingredients.</li>
+    <li>In another bowl, mix together the rest.</li>
+    <li>Wisk together.</li>
+    <li>Wait 5 minutes.</li>
+    <li>Cook the pancakes.</li>
+</ol>
+
+<hr>
+<!-- Definition list -->
+
+<dl>
+    <dt>term</dt>
+    <dd>definition</dd>
+    <dd>additional definition</dd>
+    <dt>second term</dt>
+    <dd>definition of second term</dd>
+    <dt>third term</dt>
+    <dd>definition of third term</dd>
+</dl>
+
+<hr>
+<!-- QUOTES -->
+
+<!-- There are two type of quotes <blockquotes> and <q> -->
+
+<!-- BLOCKQUOTES -->
+<!-- <blockquotes> <cite> have their scemantic value so they can be distinguished by computers -->
+
+<blockquote>
+    <p>We’ve gone from having 21 elements in HTML tags, that first document, to having 100 more elements now, and yet
+        it’s still the same language. I find that amazing. It’s still the same language that was created 25 years ago.
+        It’s grown an extra 100 elements in there, and yet it’s still the same language.</p>
+
+    <cite>— Jeremy Keith</cite>
+</blockquote>
+
+<hr>
+<!-- INLINE QUOTES -->
+
+<p>Jeremy Keith said, <q>You could open an HTML document from back then in a browser today.</q></p>
+
+<p lang="fr">Jeremy Keith a déclaré: <q>Vous pouvez aujourd’hui ouvrir un document HTML dans un navigateur.</q></p>
+
+<p lang="bg">Джереми Кийт каза: <q>Можете да отворите HTML документ от тогава още в браузър днес.</q></p>
+
+<!-- These quotes are used in between some text.
+     Instead of typing normal quotes <q> is used, it is because <q> supports different languages and changes the quotes accordingly -->
+
+<!-- There are two types of elements inline elements and block elements 
+    •Inline Elements: These elements are used in between some text <q>,<b>,<i>, are examples of inline elements
+    •Block Elements: These elements create whole blocks/section on the page <blockquote>,<p>,<ol>, are examples of block elements -->
+<hr>
+
+<!-- DATE AND TIME -->
+
+<!-- Date and Tme element uses attributes, attributes can be used on any element its syntax is <elementname attributename=" ">.Here we are going to use datetime attribute -->
+
+<time datetime="2020-11-04T19:00">Wednesday, Nov 4th at 7p</time>
+<time datetime="2020-11-04 19:00-0500">Wednesday, Nov 4th at 7p</time>
+<!-- in between date and time there should be a space or a "T"  -->
+
+<hr>
+<!-- CODE,PRE, AND BR -->
+
+<!-- <code> is an inline element that differentiates between normal text and code.
+     "HTML Entities" are used for special characters (ie, double-space,< ,> , etc) in the code that woulnd'nt be possible to add normally 
+     <br> also know as line break, it ends the line of the paragraph and continues the paragraph from the next line.
+     <pre> is used for indentation of the text of the doucument which woulnd'nt be possible to add normally. -->
+
+<pre>
+            <code>
+            &lt;ul&gt;
+              &lt;li&gt;flour&lt;/li&gt;
+              &lt;li&gt;sugar&lt;/li&gt;
+              &lt;li&gt;salt&lt;/li&gt;
+            &lt;/ul&gt;
+            
+            
+            ul {
+               color: teal;
+            }
+            li {
+               list-style-type: square;
+            }
+            </code>
+            </pre>
+
+<!-- SUBSCRIPT, SUPERSCRIPT AND SMALL -->
+
+<!-- <sup>. It is used to put the text above the normal baseline of the text.
+     <sub>, It is used to put the text below the normal baseline of the text.
+     <small>, It is used for less prominent/ least important text. -->
+
+<p>H<sub>2</sub>O</p>
+
+<p>Something that has a footnote.<sup>2</sup></p>
+
+<small>© 2019 Fancy Company</small>
+
+<p>Here’s an example of a Subscript
+    <sub>1</sub>
+    and a Superscript
+    <sup>2</sup>
+    and
+    <small>small text</small>
+    all in one
+    sentence.
+</p>
